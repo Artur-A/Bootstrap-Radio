@@ -14,17 +14,21 @@
 }
 
 .radio-middle-circle-mixin(@radio-size) { 
-    @middle-circle-size: round(@radio-size / 2.5);
+    @middle-circle-size: round(@radio-size / 2.5) - 2;
 
     width: @middle-circle-size;
     height: @middle-circle-size;
     margin-top: round((@radio-size - @middle-circle-size)/2) - 2;
+
     background: white;
     border-radius: 50%; 
 }
 
 :root {
     label.radio-bootstrap {
+        margin-right: 10px;
+        vertical-align: middle;
+
         input[type=radio] {
             /* hide original check box */
             opacity: 0;
@@ -38,7 +42,7 @@
 
                 display: inline-block;
                 cursor: pointer;
-                margin: 0 7px 0 -34px;
+                margin: 0 7px 0 -20px;
                 vertical-align: middle;
                 text-align: center;
             }
